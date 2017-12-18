@@ -1,1 +1,46 @@
-placeholder
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    border: 2px solid green;
+    width: 90%;
+    min-height: 100%;
+    
+}
+
+.question-area {
+    position: relative;
+}
+
+.answer {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.answer1:hover{
+    background: grey;
+}
+
+.answer2:hover{
+    background: grey;
+}
+
+.answer3:hover{
+    background: grey;
+}
+
+.answer4:hover{
+    background: grey;
+}
+
+.response-gif > img {
+    max-width: 100%;
+}
+
+.hidden {
+    float: left;
+    visibility: hidden;
+}
