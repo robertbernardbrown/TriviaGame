@@ -1,13 +1,19 @@
 html, body {
     height: 100%;
     margin: 0;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .container {
-    border: 2px solid green;
     width: 90%;
     min-height: 100%;
-    
+    background-color: rgba(255, 255, 255, 0.73);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .question-area {
@@ -43,4 +49,108 @@ html, body {
 .hidden {
     float: left;
     visibility: hidden;
+}
+
+@media only screen and (max-width: 1824px) {
+    .btn {
+        width: 10%;
+        margin: 0 auto;
+    }
+    .answer1:hover{
+        background: grey;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .answer2:hover{
+        background: grey;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .answer3:hover{
+        background: grey;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .answer0:hover{
+        background: grey;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1224px) {
+    .btn {
+        width: 10%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .btn {
+        width: 15%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .btn {
+        width: 20%;
+        margin: 0 auto;
+    }
+    .answer1:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .answer2:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .answer3:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .answer0:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .btn {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .answer1:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .answer2:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .answer3:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .answer0:hover{
+        background: grey;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
