@@ -74,7 +74,7 @@ var nextQuestion = function () {
     for (var i in answers) {
     $('.answer').append("<div class = 'text-center allAnswers answer" + i + "' id = '" + classify(answers[i]) + "'> <h3>" + answers[i] + "</h3></div>"); 
     }
-    questionCountdown()
+    questionCountdown();
 }
     
 
@@ -84,7 +84,6 @@ var chooseAnswer = function () {
         correct();
         correctCount++;
         questionArray.splice(questionIndex, 1);
-        console.log(questionArray)
         clearInterval(decrementTime);
         if (questionArray.length > 0) {
             setTimeout(nextQuestion, 3000);
@@ -94,8 +93,7 @@ var chooseAnswer = function () {
         } else {
         incorrect();
         incorrectCount++;
-        questionArray.splice(questionIndex, 1)
-        console.log(questionArray)        
+        questionArray.splice(questionIndex, 1);
         clearInterval(decrementTime);
         if (questionArray.length > 0) {
             setTimeout(nextQuestion, 3000);
@@ -113,6 +111,7 @@ var questionCountdown = function () {
         if (timeLeft == 0) {
             questionArray.splice(questionIndex, 1);      
             clearInterval(decrementTime);
+            incorrectCount++;
             timeUp();
             if (questionArray.length > 0) {
             setTimeout(nextQuestion, 3000);
@@ -123,15 +122,38 @@ var questionCountdown = function () {
     }, 1000);
 }
 
+var restartGame = function () {
+    questionArray = [
+        question1 = new MakeQuestions ("1What movie takes place in NY?", [answer1 = "1Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question2 = new MakeQuestions ("2What movie takes place in NY?", [answer1 = "2Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question3 = new MakeQuestions ("3What movie takes place in NY?", [answer1 = "3Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question4 = new MakeQuestions ("4What movie takes place in NY?", [answer1 = "4Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question5 = new MakeQuestions ("5What movie takes place in NY?", [answer1 = "5Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question6 = new MakeQuestions ("6What movie takes place in NY?", [answer1 = "6Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question7 = new MakeQuestions ("7What movie takes place in NY?", [answer1 = "7Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question8 = new MakeQuestions ("8What movie takes place in NY?", [answer1 = "8Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question9 = new MakeQuestions ("9What movie takes place in NY?", [answer1 = "9Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question0 = new MakeQuestions ("0What movie takes place in NY?", [answer1 = "0Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+    ]
+    timeLeft = 30;
+    correctCount = 0;
+    incorrectCount = 0;
+    $('.question-area').removeClass('hidden');
+    $('.answer-area').removeClass('hidden');
+    $('.instructions').addClass('hidden');
+    $('.btn').addClass('hidden');
+    nextQuestion();
+}
+
 var finishScreen = function () {
     $('.instructions').removeClass('hidden');
     $('.feedback-area').addClass('hidden');
     $('.question-area').addClass('hidden');
     $('.answer-area').addClass('hidden');
-    $('.instructions').html("<h2>You've finished the quiz! Here's how you did:</h2>");
-    $('.instructions').append("<h3>Correct:"+ correctCount +"</h3>")
-                      .append("<h3>Incorrect:"+ incorrectCount +"</h3>")
-                      .append("<div class = 'btn btn-primary btn-block restart-btn'>Try Again?</div>");
+    $('.instructions').html("<h2>You've finished the quiz! Here's how you did:</h2> <br>" +
+                            "<h3>Correct: "+ correctCount +"</h3> <br>" +
+                            "<h3>Incorrect: "+ incorrectCount +"</h3> <br>" +
+                            "<div class = 'btn btn-primary btn-block restart-btn'>Try Again?</div>");
 }
 
 var timeUp = function () {
@@ -162,4 +184,5 @@ var incorrect = function () {
 }
 
 $('.start-btn').click(startTrivia);
-$(document).on('click', '.allAnswers', chooseAnswer)
+$(document).on('click', '.allAnswers', chooseAnswer);
+$(document).on('click', '.restart-btn', restartGame);
