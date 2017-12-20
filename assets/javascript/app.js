@@ -1,10 +1,12 @@
-var newQuestion
-var answers
-var theAnswer
-var userChoice
-var gifResponse
-var questionIndex
+var newQuestion;
+var answers;
+var theAnswer;
+var userChoice;
+var gifResponse;
+var questionIndex;
 var timeLeft = 30;
+var correctCount = 0;
+var incorrectCount = 0;
 var questionArray = [
     question1 = new MakeQuestions ("1What movie takes place in NY?", [answer1 = "1Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
     question2 = new MakeQuestions ("2What movie takes place in NY?", [answer1 = "2Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
@@ -36,7 +38,6 @@ var randomQuestion = function () {
             theAnswer = questionArray[i].solution;
             gifResponse = questionArray[i].gif;
             questionIndex = i;
-            // console.log(newQuestion, answers, theAnswer, gifResponse, questionIndex)
         }
     }
 }
@@ -57,14 +58,12 @@ var startTrivia = function () {
     $('.question-area').append("<div class = 'text-center time-left'> <h2>Seconds to answer: <br>" + timeLeft +"</h2></div>");
     $('.question-area').append("<div class = 'text-center question'> <h2>" + newQuestion + "</h2></div>");  
     for (var i in answers) {
-    console.log(answers[i]);
     $('.answer').append("<div class = 'text-center allAnswers answer" + i + "' id = '" + classify(answers[i]) + "'> <h3>" + answers[i] + "</h3></div>"); 
     }
     questionCountdown();
 }
 
 var nextQuestion = function () {
-    // console.log(newQuestion, answers, theAnswer, questionIndex)
     $('.answer').removeClass('hidden');
     $('.question').removeClass('hidden');
     $('.feedback-area').addClass('hidden');
@@ -73,7 +72,6 @@ var nextQuestion = function () {
     $('.time-left').html("<h2>Seconds to answer: <br>" + timeLeft +"</h2></div>");
     $('.question').html("<h2>" + newQuestion + "</h2></div>");  
     for (var i in answers) {
-        console.log(answers[i])
     $('.answer').append("<div class = 'text-center allAnswers answer" + i + "' id = '" + classify(answers[i]) + "'> <h3>" + answers[i] + "</h3></div>"); 
     }
     questionCountdown()
@@ -84,29 +82,56 @@ var nextQuestion = function () {
 var chooseAnswer = function () {
     if (classify($(this).text()) === classify(theAnswer)) {      
         correct();
+        correctCount++;
         questionArray.splice(questionIndex, 1);
+        console.log(questionArray)
         clearInterval(decrementTime);
-        setTimeout(nextQuestion, 3000);
+        if (questionArray.length > 0) {
+            setTimeout(nextQuestion, 3000);
+            } else {
+            setTimeout(finishScreen, 3000);
+            }
         } else {
         incorrect();
+        incorrectCount++;
         questionArray.splice(questionIndex, 1)
+        console.log(questionArray)        
         clearInterval(decrementTime);
-        setTimeout(nextQuestion, 3000);
-        }
+        if (questionArray.length > 0) {
+            setTimeout(nextQuestion, 3000);
+            } else {
+            setTimeout(finishScreen, 3000);
+            }
+        }        
     }
 
 var decrementTime
 var questionCountdown = function () {
-    // setTimeout(timeUp, 30 * 1000);
     decrementTime = setInterval(function () {
         timeLeft--
         $('.time-left').html("<div class = 'text-center time-left'> <h2>Seconds to answer: <br>" + timeLeft + "</h2></div>")
         if (timeLeft == 0) {
+            questionArray.splice(questionIndex, 1);      
             clearInterval(decrementTime);
             timeUp();
+            if (questionArray.length > 0) {
             setTimeout(nextQuestion, 3000);
+            } else {
+            setTimeout(finishScreen, 3000);
+            }
         };
     }, 1000);
+}
+
+var finishScreen = function () {
+    $('.instructions').removeClass('hidden');
+    $('.feedback-area').addClass('hidden');
+    $('.question-area').addClass('hidden');
+    $('.answer-area').addClass('hidden');
+    $('.instructions').html("<h2>You've finished the quiz! Here's how you did:</h2>");
+    $('.instructions').append("<h3>Correct:"+ correctCount +"</h3>")
+                      .append("<h3>Incorrect:"+ incorrectCount +"</h3>")
+                      .append("<div class = 'btn btn-primary btn-block restart-btn'>Try Again?</div>");
 }
 
 var timeUp = function () {
@@ -137,5 +162,4 @@ var incorrect = function () {
 }
 
 $('.start-btn').click(startTrivia);
-// $(document).on('click', '.allAnswers', answerAndSolution)
 $(document).on('click', '.allAnswers', chooseAnswer)
