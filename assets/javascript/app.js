@@ -113,6 +113,7 @@ var timeUp = function () {
     $('.question').addClass('hidden');
     $('.answer').addClass('hidden');
     $('.allAnswers').remove();
+    $('.feedback-area').removeClass('hidden');
     $('.response').html("<h2>Time's up! The correct answer is " + theAnswer + "</h2>");
     $('.response-gif').html("<img src='" + gifResponse + "' alt='home-alone'>");
 }
@@ -121,6 +122,7 @@ var correct = function () {
     $('.question').addClass('hidden');
     $('.answer').addClass('hidden');
     $('.allAnswers').remove();
+    $('.feedback-area').removeClass('hidden');
     $('.response').html("<h2>You got it!</h2>");
     $('.response-gif').html("<img src='" + gifResponse + "' alt='home-alone'>");
 }
@@ -129,6 +131,7 @@ var incorrect = function () {
     $('.question').addClass('hidden');
     $('.answer').addClass('hidden');
     $('.allAnswers').remove();
+    $('.feedback-area').removeClass('hidden');
     $('.response').html("<h2>Nope! The correct answer is " + theAnswer + "</h2>");
     $('.response-gif').html("<img src='" + gifResponse + "' alt='home-alone'>");
 }
