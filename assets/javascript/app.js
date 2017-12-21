@@ -35,10 +35,9 @@ function MakeQuestions (question, answers, solution, gif) {
     this.gif = gif;
 }
 
-//choose a random question to display
+//choose a random question and fill global variables with question data
 var randomQuestion = function () {
     var randomNumber = Math.floor(Math.random() * questionArray.length);
-    console.log(randomNumber)
     for (var i in questionArray) {
         if (randomNumber == i) {
             newQuestion = questionArray[i].question;
@@ -59,6 +58,8 @@ var classify = function (answer) {
 }
 
 //start trivia and display first question
+//hides instructions and btn, adds question area div and individual answer divs
+//starts questionCountdown function
 var startTrivia = function () {
     randomQuestion();
     $('.instructions').addClass('hidden');
@@ -71,6 +72,9 @@ var startTrivia = function () {
     questionCountdown();
 }
 
+//continue trivia and display subsequent questions after first question
+//hides feedback area, reveals question area div and individual answer divs
+//starts questionCountdown function
 var nextQuestion = function () {
     $('.answer').removeClass('hidden');
     $('.question').removeClass('hidden');
@@ -87,6 +91,9 @@ var nextQuestion = function () {
     
 
 //compare answer and solution
+//if correct answer, run correct answer variables and functions
+//if incorrect answer, run incorrect answer variables and functions
+//also run finish screen when all questions are finished
 var chooseAnswer = function () {
     if (classify($(this).text()) === classify(theAnswer)) {      
         correct();
@@ -111,6 +118,7 @@ var chooseAnswer = function () {
         }        
     }
 
+//function to keep track of time left to answer question
 var decrementTime
 var questionCountdown = function () {
     decrementTime = setInterval(function () {
@@ -130,6 +138,7 @@ var questionCountdown = function () {
     }, 1000);
 }
 
+//function to reset variables and hide/unhide necessary divs
 var restartGame = function () {
     questionArray = [
         question1 = new MakeQuestions ("Where does Santa\'s sleigh crash?", [answer1 = "Central Park", answer2 = "Prospect Park", answer3 = "The Artic Circle", answer4 = "Midtown Manhattan"], "Central Park", "assets/images/ninny.gif"),
@@ -161,6 +170,7 @@ var restartGame = function () {
     nextQuestion();
 }
 
+//function to display the finish screen and final scores as well as restart button
 var finishScreen = function () {
     $('.instructions').removeClass('hidden');
     $('.feedback-area').addClass('hidden');
@@ -172,6 +182,7 @@ var finishScreen = function () {
                             "<div class = 'btn btn-primary btn-block restart-btn'>Try Again?</div>");
 }
 
+//function to run after a question once time runs out
 var timeUp = function () {
     $('.question').addClass('hidden');
     $('.answer').addClass('hidden');
@@ -181,6 +192,7 @@ var timeUp = function () {
     $('.response-gif').html("<img src='" + gifResponse + "' alt='home-alone'>");
 }
 
+//function to run when a user guesses a correct answer
 var correct = function () {
     $('.question').addClass('hidden');
     $('.answer').addClass('hidden');
@@ -190,6 +202,7 @@ var correct = function () {
     $('.response-gif').html("<img src='" + gifResponse + "' alt='home-alone'>");
 }
 
+//function to run when a user guesses an incorrect answer
 var incorrect = function () {
     $('.question').addClass('hidden');
     $('.answer').addClass('hidden');
@@ -199,6 +212,7 @@ var incorrect = function () {
     $('.response-gif').html("<img src='" + gifResponse + "' alt='home-alone'>");
 }
 
+//listeners
 $('.start-btn').click(startTrivia);
 $(document).on('click', '.allAnswers', chooseAnswer);
 $(document).on('click', '.restart-btn', restartGame);
