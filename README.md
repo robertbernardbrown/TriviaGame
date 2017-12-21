@@ -18,7 +18,7 @@ Text Editor - VS Studio
 * Javascript functionality
 
 ## Site Preview
-![alt text](https://github.com/robertbernardbrown/week-4-game/blob/master/screenshot.png)
+![alt text](https://github.com/robertbernardbrown/Triviagame/blob/master/elfshot.png)
 
 ## Future Development
 
