@@ -26,22 +26,6 @@ html, body {
     margin: 0 auto;
 }
 
-.answer1:hover{
-    background: grey;
-}
-
-.answer2:hover{
-    background: grey;
-}
-
-.answer3:hover{
-    background: grey;
-}
-
-.answer0:hover{
-    background: grey;
-}
-
 .response-gif > img {
     max-width: 100%;
 }
@@ -57,27 +41,39 @@ html, body {
         margin: 0 auto;
     }
     .answer1:hover{
-        background: grey;
+        background: rgb(94, 180, 94);
         width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer2:hover{
-        background: grey;
+        background: rgb(82, 161, 82);
         width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer3:hover{
-        background: grey;
+        background: rgb(61, 121, 61);
         width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer0:hover{
-        background: grey;
+        background: rgb(106, 203, 106);
         width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
 }
 
@@ -101,27 +97,39 @@ html, body {
         margin: 0 auto;
     }
     .answer1:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(94, 180, 94);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer2:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(82, 161, 82);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer3:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(61, 121, 61);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer0:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(106, 203, 106);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
 }
 
@@ -131,26 +139,38 @@ html, body {
         margin: 0 auto;
     }
     .answer1:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(94, 180, 94);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer2:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(82, 161, 82);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer3:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(61, 121, 61);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
     
     .answer0:hover{
-        background: grey;
-        width: 100%;
+        background: rgb(106, 203, 106);
+        width: 50%;
         margin: 0 auto;
+        color: white;
+        border: 2px solid red;
+        outline-offset: 2px;
     }
 }
