@@ -214,5 +214,5 @@ var incorrect = function () {
 
 //listeners
 $('.start-btn').click(startTrivia);
-$(document).on('click', '.allAnswers', chooseAnswer);
+$(document).on('click touchstart', '.allAnswers', chooseAnswer);
 $(document).on('click', '.restart-btn', restartGame);
