@@ -8,16 +8,24 @@ var timeLeft = 30;
 var correctCount = 0;
 var incorrectCount = 0;
 var questionArray = [
-    question1 = new MakeQuestions ("1What movie takes place in NY?", [answer1 = "1Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question2 = new MakeQuestions ("2What movie takes place in NY?", [answer1 = "2Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question3 = new MakeQuestions ("3What movie takes place in NY?", [answer1 = "3Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question4 = new MakeQuestions ("4What movie takes place in NY?", [answer1 = "4Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question5 = new MakeQuestions ("5What movie takes place in NY?", [answer1 = "5Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question6 = new MakeQuestions ("6What movie takes place in NY?", [answer1 = "6Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question7 = new MakeQuestions ("7What movie takes place in NY?", [answer1 = "7Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question8 = new MakeQuestions ("8What movie takes place in NY?", [answer1 = "8Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question9 = new MakeQuestions ("9What movie takes place in NY?", [answer1 = "9Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-    question0 = new MakeQuestions ("0What movie takes place in NY?", [answer1 = "0Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+    question1 = new MakeQuestions ("Where does Santa\'s sleigh crash?", [answer1 = "Central Park", answer2 = "Prospect Park", answer3 = "The Artic Circle", answer4 = "Midtown Manhattan"], "Central Park", "assets/images/ninny.gif"),
+    question2 = new MakeQuestions ("How many cookies does Buddy shove into the VCR?", [answer1 = "19", answer2 = "11", answer3 = "15", answer4 = "17"], "11", "assets/images/cookies.gif"),
+    question3 = new MakeQuestions ("Which of these is not an elf food group?", [answer1 = "Chocolate", answer2 = "Candy", answer3 = "Candy Canes", answer4 = "Syrup"], "Chocolate", "assets/images/food.gif"),
+    question4 = new MakeQuestions ("What\'s the name of the department store where Jovie works?", [answer1 = "Kimble\'s", answer2 = "Gimble\'s", answer3 = "Toyland", answer4 = "Macy\'s"], "Gimble\'s", "assets/images/smile.gif"),
+    question5 = new MakeQuestions ("Where does Buddy get his name?", [answer1 = "His father", answer2 = "He\'s friendly", answer3 = "His diaper brand", answer4 = "He names himself"], "His diaper brand", "assets/images/color.gif"),
+    question6 = new MakeQuestions ("Ming Ming, one of the lead elf toybuilders, also starred in what other Christmas classic?", [answer1 = "A Christmas Carol", answer2 = "Home Alone 2", answer3 = "White Christmas", answer4 = "A Christmas Story"], "A Christmas Story", "assets/images/revolve.gif"),
+    question7 = new MakeQuestions ("Where do Buddy and Jovie kiss for the first time?", [answer1 = "Central Park", answer2 = "Columbus Circle", answer3 = "Gimbel's Toy Store", answer4 = "Rockefeller Center"], "Rockefeller Center", "assets/images/hop.gif"),
+    question8 = new MakeQuestions ("Where does Buddy's dad work?", [answer1 = "The Empire State Building", answer2 = "The Chrysler Building", answer3 = "The World Trade Center", answer4 = "The Flatiron Building"], "The Empire State Building", "assets/images/empire.gif"),
+    question9 = new MakeQuestions ("Which Ray's pizza is the real Ray's pizza?", [answer1 = "Across from Sbarro", answer2 = "Down by Brooklyn Bridge", answer3 = "Midtown", answer4 = "on 11th Street"], "on 11th Street", "assets/images/nutcracker.gif"),
+    question0 = new MakeQuestions ("What animal does Buddy try to hug on his way to New York City?", [answer1 = "Raccoon", answer2 = "Dog", answer3 = "Squirrel", answer4 = "Badger"], "Raccoon", "assets/images/raccoon.gif"),
+    question11 = new MakeQuestions ("What kind of business does Walter Hobbs work in?", [answer1 = "Publishing", answer2 = "Advertising", answer3 = "Accounting", answer4 = "Music"], "Publishing", "assets/images/escalate.gif"),
+    question12 = new MakeQuestions ("What is buddy's stepbrother\'s name?", [answer1 = "Kevin", answer2 = "Nick", answer3 = "Sam", answer4 = "Michael"], "Michael", "assets/images/jackbox.gif"),
+    question13 = new MakeQuestions ("What does fake Santa smell like?", [answer1 = "Beer and regret", answer2 = "Beef and cheese", answer3 = "Smoke and lies", answer4 = "Whiskey"], "Beef and cheese", "assets/images/beef.gif"),
+    question14 = new MakeQuestions ("What does Buddy build out of the wood from the entertainment center?", [answer1 = "A hat rack", answer2 = "A frame", answer3 = "A Christmas Wreath", answer4 = "A Rocking Horse"], "A Rocking Horse", "assets/images/lies.gif"),
+    question15 = new MakeQuestions ("When did Papa Elf become a master tinkerer?", [answer1 = "380", answer2 = "450", answer3 = "100", answer4 = "490"], "490", "assets/images/papa.gif"),
+    question16 = new MakeQuestions ("What temperature does Miles Finch request for the inside of his limo?", [answer1 = "72 degrees", answer2 = "71 degrees", answer3 = "68 degrees", answer4 = "98 degrees"], "71 degrees", "assets/images/kicked.gif"),
+    question17 = new MakeQuestions ("Which police force pursued Santa and Buddy in their sleigh?", [answer1 = "The NYPD", answer2 = "The Cops", answer3 = "The Central Park Rangers", answer4 = "The Brooklyn PD"], "The Central Park Rangers", "assets/images/sing.gif"),
+    question18 = new MakeQuestions ("Which of these landmarks wasn\'t included in Buddy\'s journey to New York City?", [answer1 = "The Seven Levels of the Candy Cane Forest", answer2 = "The Chocolate Fudge Mire", answer3 = "The Lincoln Tunnel", answer4 = "The Sea of Swirly Twirly Gum Drops"], "The Chocolate Fudge Mire", "assets/images/gumdrops.gif"),
 ]
 
 function MakeQuestions (question, answers, solution, gif) {
@@ -124,16 +132,24 @@ var questionCountdown = function () {
 
 var restartGame = function () {
     questionArray = [
-        question1 = new MakeQuestions ("1What movie takes place in NY?", [answer1 = "1Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question2 = new MakeQuestions ("2What movie takes place in NY?", [answer1 = "2Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question3 = new MakeQuestions ("3What movie takes place in NY?", [answer1 = "3Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question4 = new MakeQuestions ("4What movie takes place in NY?", [answer1 = "4Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question5 = new MakeQuestions ("5What movie takes place in NY?", [answer1 = "5Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question6 = new MakeQuestions ("6What movie takes place in NY?", [answer1 = "6Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question7 = new MakeQuestions ("7What movie takes place in NY?", [answer1 = "7Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question8 = new MakeQuestions ("8What movie takes place in NY?", [answer1 = "8Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question9 = new MakeQuestions ("9What movie takes place in NY?", [answer1 = "9Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
-        question0 = new MakeQuestions ("0What movie takes place in NY?", [answer1 = "0Harry Potter", answer2 = "Sorceror's Stone", answer3 = "Home Alone", answer4 = "LOTR"], "Home Alone", "assets/images/home-alone.gif"),
+        question1 = new MakeQuestions ("Where does Santa\'s sleigh crash?", [answer1 = "Central Park", answer2 = "Prospect Park", answer3 = "The Artic Circle", answer4 = "Midtown Manhattan"], "Central Park", "assets/images/ninny.gif"),
+        question2 = new MakeQuestions ("How many cookies does Buddy shove into the VCR?", [answer1 = "19", answer2 = "11", answer3 = "15", answer4 = "17"], "11", "assets/images/cookies.gif"),
+        question3 = new MakeQuestions ("Which of these is not an elf food group?", [answer1 = "Chocolate", answer2 = "Candy", answer3 = "Candy Canes", answer4 = "Syrup"], "Chocolate", "assets/images/food.gif"),
+        question4 = new MakeQuestions ("What\'s the name of the department store where Jovie works?", [answer1 = "Kimble\'s", answer2 = "Gimble\'s", answer3 = "Toyland", answer4 = "Macy\'s"], "Gimble\'s", "assets/images/smile.gif"),
+        question5 = new MakeQuestions ("Where does Buddy get his name?", [answer1 = "His father", answer2 = "He\'s friendly", answer3 = "His diaper brand", answer4 = "He names himself"], "His diaper brand", "assets/images/color.gif"),
+        question6 = new MakeQuestions ("Ming Ming, one of the lead elf toybuilders, also starred in what other Christmas classic?", [answer1 = "A Christmas Carol", answer2 = "Home Alone 2", answer3 = "White Christmas", answer4 = "A Christmas Story"], "A Christmas Story", "assets/images/revolve.gif"),
+        question7 = new MakeQuestions ("Where do Buddy and Jovie kiss for the first time?", [answer1 = "Central Park", answer2 = "Columbus Circle", answer3 = "Gimbel's Toy Store", answer4 = "Rockefeller Center"], "Rockefeller Center", "assets/images/hop.gif"),
+        question8 = new MakeQuestions ("Where does Buddy's dad work?", [answer1 = "The Empire State Building", answer2 = "The Chrysler Building", answer3 = "The World Trade Center", answer4 = "The Flatiron Building"], "The Empire State Building", "assets/images/empire.gif"),
+        question9 = new MakeQuestions ("Which Ray's pizza is the real Ray's pizza?", [answer1 = "Across from Sbarro", answer2 = "Down by Brooklyn Bridge", answer3 = "Midtown", answer4 = "on 11th Street"], "on 11th Street", "assets/images/nutcracker.gif"),
+        question0 = new MakeQuestions ("What animal does Buddy try to hug on his way to New York City?", [answer1 = "Raccoon", answer2 = "Dog", answer3 = "Squirrel", answer4 = "Badger"], "Raccoon", "assets/images/raccoon.gif"),
+        question11 = new MakeQuestions ("What kind of business does Walter Hobbs work in?", [answer1 = "Publishing", answer2 = "Advertising", answer3 = "Accounting", answer4 = "Music"], "Publishing", "assets/images/escalate.gif"),
+        question12 = new MakeQuestions ("What is buddy's stepbrother\'s name?", [answer1 = "Kevin", answer2 = "Nick", answer3 = "Sam", answer4 = "Michael"], "Michael", "assets/images/jackbox.gif"),
+        question13 = new MakeQuestions ("What does fake Santa smell like?", [answer1 = "Beer and regret", answer2 = "Beef and cheese", answer3 = "Smoke and lies", answer4 = "Whiskey"], "Beef and cheese", "assets/images/beef.gif"),
+        question14 = new MakeQuestions ("What does Buddy build out of the wood from the entertainment center?", [answer1 = "A hat rack", answer2 = "A frame", answer3 = "A Christmas Wreath", answer4 = "A Rocking Horse"], "A Rocking Horse", "assets/images/lies.gif"),
+        question15 = new MakeQuestions ("When did Papa Elf become a master tinkerer?", [answer1 = "380", answer2 = "450", answer3 = "100", answer4 = "490"], "490", "assets/images/papa.gif"),
+        question16 = new MakeQuestions ("What temperature does Miles Finch request for the inside of his limo?", [answer1 = "72 degrees", answer2 = "71 degrees", answer3 = "68 degrees", answer4 = "98 degrees"], "71 degrees", "assets/images/kicked.gif"),
+        question17 = new MakeQuestions ("Which police force pursued Santa and Buddy in their sleigh?", [answer1 = "The NYPD", answer2 = "The Cops", answer3 = "The Central Park Rangers", answer4 = "The Brooklyn PD"], "The Central Park Rangers", "assets/images/sing.gif"),
+        question18 = new MakeQuestions ("Which of these landmarks wasn\'t included in Buddy\'s journey to New York City?", [answer1 = "The Seven Levels of the Candy Cane Forest", answer2 = "The Chocolate Fudge Mire", answer3 = "The Lincoln Tunnel", answer4 = "The Sea of Swirly Twirly Gum Drops"], "The Chocolate Fudge Mire", "assets/images/gumdrops.gif"),
     ]
     timeLeft = 30;
     correctCount = 0;
