@@ -16,6 +16,24 @@ html, body {
     background-position: center;
 }
 
+.page-header {
+    outline: 4px dashed green;
+    box-shadow: 0 0 0 4px #EA3556;
+    animation: 1s animateBorder infinite;
+}
+
+.page-header > h1 {
+    margin: 0 auto;
+    padding-top: 1%;
+}
+
+@keyframes animateBorder {
+    to {
+      outline-color: #EA3556;
+      box-shadow: 0 0 0 4px green;
+    }
+  }
+
 .question-area {
     position: relative;
 }

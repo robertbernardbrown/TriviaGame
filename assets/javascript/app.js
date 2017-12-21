@@ -22,9 +22,9 @@ var questionArray = [
     question12 = new MakeQuestions ("What is Buddy's stepbrother\'s name?", [answer1 = "Kevin", answer2 = "Nick", answer3 = "Sam", answer4 = "Michael"], "Michael", "assets/images/jackbox.gif"),
     question13 = new MakeQuestions ("What does fake Santa smell like?", [answer1 = "Beer and regret", answer2 = "Beef and cheese", answer3 = "Smoke and lies", answer4 = "Whiskey"], "Beef and cheese", "assets/images/beef.gif"),
     question14 = new MakeQuestions ("What does Buddy build with wood from the entertainment center?", [answer1 = "A hat rack", answer2 = "A frame", answer3 = "A wreath", answer4 = "A rocking horse"], "A Rocking Horse", "assets/images/lies.gif"),
-    question15 = new MakeQuestions ("When did Papa Elf become a master tinkerer?", [answer1 = "380", answer2 = "450", answer3 = "100", answer4 = "490"], "490", "assets/images/papa.gif"),
+    question15 = new MakeQuestions ("What age did Papa Elf become a master tinkerer?", [answer1 = "380", answer2 = "450", answer3 = "100", answer4 = "490"], "490", "assets/images/papa.gif"),
     question16 = new MakeQuestions ("What temperature does Miles Finch request for the inside of his limo?", [answer1 = "72 degrees", answer2 = "71 degrees", answer3 = "68 degrees", answer4 = "98 degrees"], "71 degrees", "assets/images/kicked.gif"),
-    question17 = new MakeQuestions ("Which police force pursued Santa and Buddy in their sleigh?", [answer1 = "The NYPD", answer2 = "The Cops", answer3 = "The Central Park Rangers", answer4 = "The Brooklyn PD"], "The Central Park Rangers", "assets/images/sing.gif"),
+    question17 = new MakeQuestions ("Which police force pursues Santa and Buddy in their sleigh?", [answer1 = "The NYPD", answer2 = "The Cops", answer3 = "The Central Park Rangers", answer4 = "The Brooklyn PD"], "The Central Park Rangers", "assets/images/sing.gif"),
     question18 = new MakeQuestions ("Which of these landmarks isn\'t included in Buddy\'s journey to NYC?", [answer1 = "The Candy Cane Forest", answer2 = "The Chocolate Fudge Mire", answer3 = "The Lincoln Tunnel", answer4 = "Sea of Swirly Twirly Gum Drops"], "The Chocolate Fudge Mire", "assets/images/gumdrops.gif"),
 ]
 
@@ -146,9 +146,9 @@ var restartGame = function () {
         question12 = new MakeQuestions ("What is Buddy's stepbrother\'s name?", [answer1 = "Kevin", answer2 = "Nick", answer3 = "Sam", answer4 = "Michael"], "Michael", "assets/images/jackbox.gif"),
         question13 = new MakeQuestions ("What does fake Santa smell like?", [answer1 = "Beer and regret", answer2 = "Beef and cheese", answer3 = "Smoke and lies", answer4 = "Whiskey"], "Beef and cheese", "assets/images/beef.gif"),
         question14 = new MakeQuestions ("What does Buddy build with wood from the entertainment center?", [answer1 = "A hat rack", answer2 = "A frame", answer3 = "A wreath", answer4 = "A rocking horse"], "A Rocking Horse", "assets/images/lies.gif"),
-        question15 = new MakeQuestions ("When did Papa Elf become a master tinkerer?", [answer1 = "380", answer2 = "450", answer3 = "100", answer4 = "490"], "490", "assets/images/papa.gif"),
+        question15 = new MakeQuestions ("What age did Papa Elf become a master tinkerer?", [answer1 = "380", answer2 = "450", answer3 = "100", answer4 = "490"], "490", "assets/images/papa.gif"),
         question16 = new MakeQuestions ("What temperature does Miles Finch request for the inside of his limo?", [answer1 = "72 degrees", answer2 = "71 degrees", answer3 = "68 degrees", answer4 = "98 degrees"], "71 degrees", "assets/images/kicked.gif"),
-        question17 = new MakeQuestions ("Which police force pursued Santa and Buddy in their sleigh?", [answer1 = "The NYPD", answer2 = "The Cops", answer3 = "The Central Park Rangers", answer4 = "The Brooklyn PD"], "The Central Park Rangers", "assets/images/sing.gif"),
+        question17 = new MakeQuestions ("Which police force pursues Santa and Buddy in their sleigh?", [answer1 = "The NYPD", answer2 = "The Cops", answer3 = "The Central Park Rangers", answer4 = "The Brooklyn PD"], "The Central Park Rangers", "assets/images/sing.gif"),
         question18 = new MakeQuestions ("Which of these landmarks isn\'t included in Buddy\'s journey to NYC?", [answer1 = "The Candy Cane Forest", answer2 = "The Chocolate Fudge Mire", answer3 = "The Lincoln Tunnel", answer4 = "Sea of Swirly Twirly Gum Drops"], "The Chocolate Fudge Mire", "assets/images/gumdrops.gif"),
     ]
     timeLeft = 30;
